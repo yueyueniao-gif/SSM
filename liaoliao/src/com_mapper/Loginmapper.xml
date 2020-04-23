@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com_mapper.Loginmapper">
+<select id="selectone" parameterType="com_pojo.User" resultType="com_pojo.User">
+select * from liaoliao1 where name=#{name} And password=#{password};  
+</select>
+<insert id="insRegister" parameterType="com_pojo.User">
+insert into liaoliao1 (name,password,phone)values(#{name},#{password},#{phone});
+</insert>
+<select id="selectname" parameterType="com_pojo.User" resultType="com_pojo.User">
+select * from liaoliao1   
+    where name=#{name};
+</select>
+</mapper>
